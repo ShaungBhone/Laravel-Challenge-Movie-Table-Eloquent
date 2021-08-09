@@ -11,6 +11,8 @@ class Movie extends Model
 
     protected $fillable = ['category_id', 'title', 'release_year'];
 
+    protected $with = ['category'];
+
     public function ratings()
     {
         return $this->hasMany(Rating::class);
