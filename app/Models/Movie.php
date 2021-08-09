@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Movie extends Model
 {
@@ -11,7 +11,7 @@ class Movie extends Model
 
     protected $fillable = ['category_id', 'title', 'release_year'];
 
-    protected $with = ['category'];
+    protected $with = ['category', 'ratings'];
 
     public function ratings()
     {
